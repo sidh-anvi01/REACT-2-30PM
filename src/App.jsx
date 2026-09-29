@@ -55,12 +55,40 @@
 
 
 
-import React from 'react'
+// import React from 'react'
 
+// const App = () => {
+//   return (
+//     <div>
+//       <h1 style={{color:"blue",fontSize:100,
+// backgroundColor:"orangered",
+
+
+//       }}>this is khushman</h1>
+
+// <div style={{height:100,
+//   width:100,
+//   backgroundColor:"blue"
+// }}>
+
+// </div>
+
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+import React from 'react'
+import HomePage from './pages/HomePage'
+import PlantPage from './pages/PlantPage'
 const App = () => {
   return (
     <div>
-      <h1>this is khushman</h1>
+      {/* <HomePage/> */}
+      <PlantPage/>
     </div>
   )
 }
