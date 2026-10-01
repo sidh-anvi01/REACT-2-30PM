@@ -84,11 +84,16 @@
 import React from 'react'
 import HomePage from './pages/HomePage'
 import PlantPage from './pages/PlantPage'
+import BootStrapPage from './pages/BootStrapPage'
+import ExternalStyle from './pages/ExternalStyle'
 const App = () => {
   return (
     <div>
-      {/* <HomePage/> */}
-      <PlantPage/>
+      <HomePage/>
+      {/* <PlantPage/> */}
+{/* <BootStrapPage/> */}
+{/* <ExternalStyle/> */}
+
     </div>
   )
 }
