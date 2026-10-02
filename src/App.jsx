@@ -81,18 +81,36 @@
 
 
 
-import React from 'react'
+import React, { useState } from 'react'
 import HomePage from './pages/HomePage'
 import PlantPage from './pages/PlantPage'
 import BootStrapPage from './pages/BootStrapPage'
 import ExternalStyle from './pages/ExternalStyle'
+import StateEx from './components/StateEx'
+import LoginScreen from './auth/LoginScreen'
 const App = () => {
+
+const [isUser,setIsUser]=useState(true)
+
+
   return (
     <div>
-      <HomePage/>
+      {/* <HomePage/> */}
       {/* <PlantPage/> */}
 {/* <BootStrapPage/> */}
 {/* <ExternalStyle/> */}
+{/*  */}
+<StateEx/>
+
+
+{/* {
+  isUser ? <HomePage/> : <LoginScreen/>
+} */}
+
+
+
+
+
 
     </div>
   )
