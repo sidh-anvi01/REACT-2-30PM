@@ -88,6 +88,8 @@ import BootStrapPage from './pages/BootStrapPage'
 import ExternalStyle from './pages/ExternalStyle'
 import StateEx from './components/StateEx'
 import LoginScreen from './auth/LoginScreen'
+import FormHandling from './components/FormHandling'
+import ListRendring from './components/ListRendring'
 const App = () => {
 
 const [isUser,setIsUser]=useState(true)
@@ -100,7 +102,10 @@ const [isUser,setIsUser]=useState(true)
 {/* <BootStrapPage/> */}
 {/* <ExternalStyle/> */}
 {/*  */}
-<StateEx/>
+{/* <StateEx/> */}
+{/* <FormHandling/> */}
+
+<ListRendring/>
 
 
 {/* {
