@@ -91,6 +91,7 @@ import LoginScreen from './auth/LoginScreen'
 import FormHandling from './components/FormHandling'
 import ListRendring from './components/ListRendring'
 import ListDoubt from './components/ListDoubt'
+import UseEffectEx from './components/UseEffectEx'
 const App = () => {
 
 const [isUser,setIsUser]=useState(true)
@@ -107,7 +108,12 @@ const [isUser,setIsUser]=useState(true)
 {/* <FormHandling/> */}
 
 {/* <ListRendring/> */}
-<ListDoubt/>
+{/* <ListDoubt/> */}
+
+
+<UseEffectEx/>
+
+
 
 {/* {
   isUser ? <HomePage/> : <LoginScreen/>
