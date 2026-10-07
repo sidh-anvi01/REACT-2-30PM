@@ -92,10 +92,17 @@ import FormHandling from './components/FormHandling'
 import ListRendring from './components/ListRendring'
 import ListDoubt from './components/ListDoubt'
 import UseEffectEx from './components/UseEffectEx'
+import FetchEx from './components/FetchEx'
 const App = () => {
 
 const [isUser,setIsUser]=useState(true)
 
+if(isUser){
+  return <FetchEx/> 
+}
+else{
+  return <HomePage/>
+}
 
   return (
     <div>
@@ -111,8 +118,8 @@ const [isUser,setIsUser]=useState(true)
 {/* <ListDoubt/> */}
 
 
-<UseEffectEx/>
-
+{/* <UseEffectEx/> */}
+<FetchEx/>
 
 
 {/* {
