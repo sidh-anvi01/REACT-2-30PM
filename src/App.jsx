@@ -146,26 +146,40 @@
 
 
 
-import React from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import NavBar from './components/NavBar'
-import Footer from './components/Footer'
-import HomePage from './pages/HomePage'
-import BootStrapPage from './pages/BootStrapPage'
-import PlantPage from './pages/PlantPage'
+// import React from 'react'
+// import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+// import NavBar from './components/NavBar'
+// import Footer from './components/Footer'
+// import HomePage from './pages/HomePage'
+// import BootStrapPage from './pages/BootStrapPage'
+// import PlantPage from './pages/PlantPage'
 
+
+// const App = () => {
+//   return (
+//     <BrowserRouter>
+//       <NavBar />
+//       <Routes>
+//         <Route path='/' element={<HomePage />} />
+//         <Route path='/boot' element={<BootStrapPage />} />
+//         <Route path='/plant' element={<PlantPage />} />
+//       </Routes>
+//       <Footer />
+//     </BrowserRouter>
+//   )
+// }
+
+// export default App
+
+
+
+
+import React from 'react'
+import UseRefEx from './components/UseRefEx'
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/boot' element={<BootStrapPage />} />
-        <Route path='/plant' element={<PlantPage />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+   <UseRefEx/>
   )
 }
 
