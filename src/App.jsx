@@ -174,12 +174,32 @@
 
 
 
+// import React from 'react'
+// import UseRefEx from './components/UseRefEx'
+// import UseMemeoEx from './components/UseMemeoEx'
+
+// const App = () => {
+//   return (
+// <UseMemeoEx/>
+//   )
+// }
+
+// export default App
+
+
+
 import React from 'react'
-import UseRefEx from './components/UseRefEx'
+import UserContext from './context/userContext'
+import UserScreen from './components/UserScreen'
+import UseMemeoEx from './components/UseMemeoEx'
 
 const App = () => {
-  return (
-   <UseRefEx/>
+  const name="rohan verma"
+  return ( 
+    <UserContext.Provider value={name}>
+      <UserScreen />
+    <UseMemeoEx/>
+    </UserContext.Provider>
   )
 }
 
