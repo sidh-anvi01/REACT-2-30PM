@@ -311,17 +311,57 @@
 
 
 
+// import React from 'react'
+// import './pages/HomePage'
+// import HomePage from './pages/HomePage'
+// import BootStrapPage from './pages/BootStrapPage'
+// const App = () => {
+//   return (
+//     <div>
+//       <HomePage ></HomePage>
+//       {/* <BootStrapPage/> */}
+      
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+// 15 oct 
+// react 2:30 pm 
+
+// import React from 'react'
+// import { UserProvider } from './context/userContext'
+// import UserScreen from './components/UserScreen'
+
+// const App = () => {
+//   return (
+//    <UserProvider>
+//     <UserScreen/>
+
+//    </UserProvider>
+//   )
+// }
+
+// export default App
+
+
+
+
 import React from 'react'
-import './pages/HomePage'
-import HomePage from './pages/HomePage'
-import BootStrapPage from './pages/BootStrapPage'
+import CounterScreen from './components/CounterScreen'
+import UserScreen from './components/UserScreen'
 const App = () => {
   return (
-    <div>
-      <HomePage ></HomePage>
-      {/* <BootStrapPage/> */}
-      
-    </div>
+    <>
+    <CounterScreen/>
+    
+    
+    </>
   )
 }
 
