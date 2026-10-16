@@ -352,16 +352,42 @@
 
 
 
+// import React from 'react'
+// import CounterScreen from './components/CounterScreen'
+// import UserScreen from './components/UserScreen'
+// const App = () => {
+//   return (
+//     <>
+//     <CounterScreen/>
+    
+    
+//     </>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+// for 10:30 class 
+
+
+
+
 import React from 'react'
-import CounterScreen from './components/CounterScreen'
-import UserScreen from './components/UserScreen'
+import UserPage from './pages/UserPage'
+
 const App = () => {
   return (
-    <>
-    <CounterScreen/>
-    
-    
-    </>
+ <>
+      <UserPage name="rohan" age={22}  userName="rohan@123" email="rohan@gmail.com" />
+      <UserPage name="rohan" age={22}  userName="rohan@123"  />
+      
+ </>
+   
   )
 }
 
