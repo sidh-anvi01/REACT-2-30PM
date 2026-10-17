@@ -377,17 +377,37 @@
 
 
 
+// import React from 'react'
+// import UserPage from './pages/UserPage'
+
+// const App = () => {
+//   return (
+//  <>
+//       <UserPage name="rohan" age={22}  userName="rohan@123" email="rohan@gmail.com" />
+//       <UserPage name="rohan" age={22}  userName="rohan@123"  />
+      
+//  </>
+   
+//   )
+// }
+
+// export default App
+
+
+
+
+// 10:30 useState event handling 
+
+
+
 import React from 'react'
-import UserPage from './pages/UserPage'
+import UseStateEx from './components/UseStateEx'
 
 const App = () => {
   return (
- <>
-      <UserPage name="rohan" age={22}  userName="rohan@123" email="rohan@gmail.com" />
-      <UserPage name="rohan" age={22}  userName="rohan@123"  />
-      
- </>
-   
+    <div>
+      <UseStateEx/>
+    </div>
   )
 }
 
