@@ -219,7 +219,7 @@
 //     <div>
 //       <h1>hello bootstrap </h1>
 //       <button className='btn btn-info'>click</button>
-      
+
 
 // <>
 //   {/* Hello world */}
@@ -301,7 +301,7 @@
 // </>
 
 
-      
+
 //     </div>
 //   )
 // }
@@ -320,7 +320,7 @@
 //     <div>
 //       <HomePage ></HomePage>
 //       {/* <BootStrapPage/> */}
-      
+
 //     </div>
 //   )
 // }
@@ -359,8 +359,8 @@
 //   return (
 //     <>
 //     <CounterScreen/>
-    
-    
+
+
 //     </>
 //   )
 // }
@@ -385,9 +385,9 @@
 //  <>
 //       <UserPage name="rohan" age={22}  userName="rohan@123" email="rohan@gmail.com" />
 //       <UserPage name="rohan" age={22}  userName="rohan@123"  />
-      
+
 //  </>
-   
+
 //   )
 // }
 
@@ -400,15 +400,117 @@
 
 
 
-import React from 'react'
-import UseStateEx from './components/UseStateEx'
+// import React from 'react'
+// import UseStateEx from './components/UseStateEx'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <UseStateEx/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// 10:30 form handling 
+
+
+
+
+import React, { useState } from 'react'
+import './style/FormPage.css'
 
 const App = () => {
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+  const [error, setError] = useState("")
+
+
+  const handelSubmit = (e) => {
+    e.preventDefault()
+
+
+    if (!name) {
+      console.log("please aenter the name ")
+      setError("add this name")
+      return false
+    }
+
+    if (!email) {
+      console.log("email mandatroy")
+      return false
+    }
+
+    console.log(name)
+    console.log(email)
+
+
+
+    const user = {
+      name: name,
+      email: email
+    }
+    console.log(user)
+
+    return true
+
+
+  }
+
+
+
   return (
     <div>
-      <UseStateEx/>
+      <>
+
+        <form onSubmit={handelSubmit}>
+
+          <input type="text" 
+            name="" id=""
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+
+          />  <br /><br />
+
+          {
+            error && <p></p>
+          }
+
+          <input
+            type="text" name=""
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            id=""
+          /><br />
+
+          <input
+            type="submit"
+            name="" id=""
+          />
+
+
+          <input type="password" name="" id="" />
+
+        </form>
+
+
+
+
+<h1>{name}</h1>
+<h1>{email}</h1>
+      </>
+
+
+
     </div>
   )
 }
 
 export default App
+
+
+
+
