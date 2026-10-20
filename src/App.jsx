@@ -420,97 +420,149 @@
 
 
 
-import React, { useState } from 'react'
-import './style/FormPage.css'
+// import React, { useState } from 'react'
+// import './style/FormPage.css'
+
+// const App = () => {
+//   const [name, setName] = useState()
+//   const [email, setEmail] = useState()
+//   const [error, setError] = useState("")
+
+
+//   const handelSubmit = (e) => {
+//     e.preventDefault()
+
+
+//     if (!name) {
+//       console.log("please aenter the name ")
+//       setError("add this name")
+//       return false
+//     }
+
+//     if (!email) {
+//       console.log("email mandatroy")
+//       return false
+//     }
+
+//     console.log(name)
+//     console.log(email)
+
+
+
+//     const user = {
+//       name: name,
+//       email: email
+//     }
+//     console.log(user)
+
+//     return true
+
+
+//   }
+
+
+
+//   return (
+//     <div>
+//       <>
+
+//         <form onSubmit={handelSubmit}>
+
+//           <input type="text" 
+//             name="" id=""
+//             value={name}
+//             onChange={(e) => setName(e.target.value)}
+
+//           />  <br /><br />
+
+//           {
+//             error && <p></p>
+//           }
+
+//           <input
+//             type="text" name=""
+//             value={email}
+//             onChange={(e) => setEmail(e.target.value)}
+//             id=""
+//           /><br />
+
+//           <input
+//             type="submit"
+//             name="" id=""
+//           />
+
+
+//           <input type="password" name="" id="" />
+
+//         </form>
+
+
+
+
+// <h1>{name}</h1>
+// <h1>{email}</h1>
+//       </>
+
+
+
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+
+import React from 'react'
+import { useState,lazy,Suspense } from 'react'
+import HomePage from './pages/HomePage'
+import BootStrapPage from './pages/BootStrapPage'
+// import Footer from './components/Footer'
+
+
+const Home=lazy(()=>import("./pages/HomePage"))
+const Footer=lazy(()=>import("./components/Footer"))
+
 
 const App = () => {
-  const [name, setName] = useState()
-  const [email, setEmail] = useState()
-  const [error, setError] = useState("")
-
-
-  const handelSubmit = (e) => {
-    e.preventDefault()
-
-
-    if (!name) {
-      console.log("please aenter the name ")
-      setError("add this name")
-      return false
-    }
-
-    if (!email) {
-      console.log("email mandatroy")
-      return false
-    }
-
-    console.log(name)
-    console.log(email)
+  const [loading,setLoading]=useState(true)
 
 
 
-    const user = {
-      name: name,
-      email: email
-    }
-    console.log(user)
+ 
+  setTimeout(()=>{
+    setLoading(false)
+  },2000)
 
-    return true
-
-
+ if(loading){
+    return "loading.... apge"
   }
 
 
-
   return (
-    <div>
-      <>
+  
 
-        <form onSubmit={handelSubmit}>
+<div>
 
-          <input type="text" 
-            name="" id=""
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-
-          />  <br /><br />
-
-          {
-            error && <p></p>
-          }
-
-          <input
-            type="text" name=""
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            id=""
-          /><br />
-
-          <input
-            type="submit"
-            name="" id=""
-          />
+<Suspense fallback={<h2>loading.......</h2>}>
+  <Home/>
+  <Footer/>
+</Suspense>
 
 
-          <input type="password" name="" id="" />
-
-        </form>
+</div>
 
 
-
-
-<h1>{name}</h1>
-<h1>{email}</h1>
-      </>
-
-
-
-    </div>
   )
 }
 
 export default App
-
-
-
-
