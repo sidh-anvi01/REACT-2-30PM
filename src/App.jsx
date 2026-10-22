@@ -522,46 +522,66 @@
 
 
 
-import React from 'react'
-import { useState,lazy,Suspense } from 'react'
-import HomePage from './pages/HomePage'
-import BootStrapPage from './pages/BootStrapPage'
-// import Footer from './components/Footer'
+// import React from 'react'
+// import { useState,lazy,Suspense } from 'react'
+// import HomePage from './pages/HomePage'
+// import BootStrapPage from './pages/BootStrapPage'
+// // import Footer from './components/Footer'
 
 
-const Home=lazy(()=>import("./pages/HomePage"))
-const Footer=lazy(()=>import("./components/Footer"))
+// const Home=lazy(()=>import("./pages/HomePage"))
+// const Footer=lazy(()=>import("./components/Footer"))
 
 
-const App = () => {
-  const [loading,setLoading]=useState(true)
+// const App = () => {
+//   const [loading,setLoading]=useState(true)
 
 
 
  
-  setTimeout(()=>{
-    setLoading(false)
-  },2000)
+//   setTimeout(()=>{
+//     setLoading(false)
+//   },2000)
 
- if(loading){
-    return "loading.... apge"
-  }
+//  if(loading){
+//     return "loading.... apge"
+//   }
 
 
-  return (
+//   return (
   
 
-<div>
+// <div>
 
-<Suspense fallback={<h2>loading.......</h2>}>
-  <Home/>
-  <Footer/>
-</Suspense>
-
-
-</div>
+// <Suspense fallback={<h2>loading.......</h2>}>
+//   <Home/>
+//   <Footer/>
+// </Suspense>
 
 
+// </div>
+
+
+//   )
+// }
+
+// export default App
+
+
+
+import React from 'react'
+import {Routes,Route,BrowserRouter} from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import AboutPage from './pages/AboutPage'
+const App = () => {
+  return (
+   <BrowserRouter>
+   <Routes>
+<Route path='/' element={<HomePage/>} />
+<Route path='/about' element={<AboutPage/>} />
+
+   </Routes>
+   </BrowserRouter>
   )
 }
 
